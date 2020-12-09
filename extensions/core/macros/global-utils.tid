@@ -1,6 +1,6 @@
 caption: Global Utilities
 created: 20201123182744393
-modified: 20201209075020736
+modified: 20201209084447706
 tags: $:/tags/Macro
 title: $:/rimir-common/extensions/core/macros/global-utils
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/macros
@@ -42,7 +42,7 @@ $payload$
 \define devvy(tiddler, tooltip:"Edit")
 <$reveal type="match" state="$:/state/rimir/dev-mode" text="on">
 <$button class="tc-btn-invisible tc-tiddlylink" tooltip="$tooltip$">
-<$action-sendmessage $message="tm-modal" $param="$:/plugins/rimir/core-hooks/templates/edit-text" currentTiddler={{{[[$tiddler$]is[tiddler]else<currentTiddler>]}}}/>
+<$action-sendmessage $message="tm-modal" $param="$:/rimir-common/extensions/core/templates/edit-text" currentTiddler={{{[[$tiddler$]is[tiddler]else<currentTiddler>]}}}/>
 {{$:/core/images/edit-button}}
 </$button>
 </$reveal>

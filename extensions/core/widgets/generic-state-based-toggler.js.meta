@@ -1,0 +1,8 @@
+caption: Generic State-based Toggler
+created: 20201209082028641
+modified: 20201209082103159
+module-type: widget
+tags: 
+title: $:/rimir-common/extensions/core/widgets/generic-state-based-toggler
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/widgets
+type: application/javascript

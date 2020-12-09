@@ -1,0 +1,8 @@
+caption: Dev-Guard Widget
+created: 20201209081604607
+modified: 20201209082118656
+module-type: widget
+tags: 
+title: $:/rimir-common/extensions/core/widgets/dev-guard
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/widgets
+type: application/javascript
