@@ -1,0 +1,11 @@
+caption: FS Path-Translations
+created: 20190611125748662
+modified: 20201208063135357
+tags: 
+title: $:/config/FileSystemPaths
+tocp.main-parent.ref: #:/wiki/config
+type: text/vnd.tiddlywiki
+
+[prefix[$:/lvr]][prefix[$:/tepa]]+[removeprefix[$:]addprefix[_system/housing]]
+[is[system]removeprefix[$:/]addprefix[_system/]]
+[!has[draft.of]]
