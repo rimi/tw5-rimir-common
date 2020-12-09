@@ -1,0 +1,8 @@
+caption: Relink tiddlers in .ref[s] fields on Tiddler-Rename
+created: 20201208072508939
+modified: 20201209072119687
+module-type: startup
+tags: 
+title: $:/rimir-common/extensions/core/hooks/relink-refs-on-rename
+tocp.rimir-common.parent.ref: #:/rimir-common/hooks
+type: application/javascript

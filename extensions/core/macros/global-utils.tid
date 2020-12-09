@@ -1,0 +1,56 @@
+caption: Global Utilities
+created: 20201123182744393
+modified: 20201209072437787
+tags: $:/tags/Macro
+title: $:/rimir-common/extensions/core/macros/global-utils
+tocp.rimir-common.parent.ref: #:/rimir-common/macros
+type: text/vnd.tiddlywiki
+
+\define rimir:name() <$view field="caption"><$view field="title"/></$view>
+\define rimir:name.list() <$view field="caption.list"><$view field="caption"><$view field="title"/></$view></$view>
+
+\define rimir:link(name, destination) <a href="$destination$" target="_blank" rel="noopener noreferrer">$name$</a>
+
+\define rimir:details(caption:"""<$view field="caption"><$view field="title"/></$view>""", payload:"""<$transclude mode="block"/>""", display-tools:"true")
+<$wikify name="qualifybase" text="$:/state/rimir/details/<<currentTiddler>>">
+<$wikify name="state" text="""<$macrocall $name="qualify" title=<<qualifybase>>/>""">
+<$reveal type="match" state=<<state>> text="hide" default="hide">
+<$button class="rimir-details-button" set=<<state>> setTo="show">{{$:/images/fa5/solid/chevron-circle-right}} $caption$</$button>
+</$reveal>
+
+<$reveal type="match" state=<<state>> text="show">
+<$button class="rimir-details-button" set=<<state>> setTo="hide">{{$:/images/fa5/solid/chevron-circle-down}} $caption$</$button>
+</$reveal>
+
+<$list filter="[[$display-tools$]match[true]]" variable="ignore">
+<$button tooltip="Open Tiddler" class="tc-btn-invisible tc-tiddlylink"><$action-navigate/>{{$:/core/images/open-window}}</$button>
+<$button tooltip="Edit Tiddler" class="tc-btn-invisible tc-tiddlylink" disabled="true"><$action-sendmessage $message="tm-modal" $param="$:/core/ui/EditTemplate" currentTiddler=<<currentTiddler>>/>{{$:/core/images/edit-button}}</$button>
+</$list>
+<$reveal type="match" state=<<state>> text="show">
+$payload$
+</$reveal>
+</$wikify>
+</$wikify>
+\end
+
+\define rimir:simple-details(tiddler, displayTools:"false")
+<$tiddler tiddler=<<__tiddler__>>>
+<<rimir:details display-tools:"$displayTools$">>
+</$tiddler>
+\end
+
+\define devvy(tiddler, tooltip:"Edit")
+<$reveal type="match" state="$:/state/rimir/dev-mode" text="on">
+<$button class="tc-btn-invisible tc-tiddlylink" tooltip="$tooltip$">
+<$action-sendmessage $message="tm-modal" $param="$:/plugins/rimir/core-hooks/templates/edit-text" currentTiddler={{{[[$tiddler$]is[tiddler]else<currentTiddler>]}}}/>
+{{$:/core/images/edit-button}}
+</$button>
+</$reveal>
+\end
+
+|!``<<rimir:name>>``|prints the `caption` (or the `title`, if it not exists) of ``<<currentTiddler>>``|
+|!``<<rimir:name.list>>``|prints the `caption.list` (or the `caption` than `title`, if it not exists) of ``<<currentTiddler>>``|
+|!``<<rimir:link name: destination:>>``|creates a link pointin to the given ``destination`` using ``name`` as the text displayed|
+|!``<<devvy tiddler:"" tooltip:"">>``|renders an edit-button in dev-mode that opens the edit-text modal for the provided tiddler or ``<<currentTiddler>>`` (if not provided)|
+|!``<<rimir:details caption:"" payload:"">>``|displays (un)foldable tiddler contents|
+|!``<<rimir:simple-details tiddler:"">>``|executes ``<<rimir:details>>`` on given tiddler|

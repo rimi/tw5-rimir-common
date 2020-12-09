@@ -1,0 +1,9 @@
+caption: KeyBinding: Toggle DevMode
+created: 20201208160805707
+modified: 20201208161012433
+tags: 
+title: $:/config/shortcuts/toggle-dev-mode
+tocp.main-parent.ref: #:/wiki/config/shortcuts
+type: text/vnd.tiddlywiki
+
+ctrl-1

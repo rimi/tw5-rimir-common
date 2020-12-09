@@ -1,0 +1,14 @@
+caption: KeyboardShortcut: Toggle DevMode
+created: 20201208160224876
+key: ((toggle-dev-mode))
+modified: 20201209072252335
+tags: $:/tags/KeyboardShortcut
+title: $:/rimir-common/extensions/core/keyboard-shortcuts/toggle-dev-mode
+tocp.rimir-common.parent.ref: #:/rimir-common/keyboard-shortcuts
+type: text/vnd.tiddlywiki
+
+<$list filter="[[$:/state/rimir/dev-mode]is[missing]] [{$:/state/rimir/dev-mode}removeprefix[off]]" emptyMessage="""
+<$action-setfield $tiddler="$:/state/rimir/dev-mode" text="off"/>
+""">
+<$action-setfield $tiddler="$:/state/rimir/dev-mode" text="on"/>
+</$list>
