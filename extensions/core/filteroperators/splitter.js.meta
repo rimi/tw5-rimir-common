@@ -1,8 +1,8 @@
 caption: splitter
 created: 20201208155600452
-modified: 20201209071521167
+modified: 20201209074850388
 module-type: filteroperator
 tags: 
 title: $:/rimir-common/extensions/core/filteroperators/splitter
-tocp.rimir-common.parent.ref: #:/rimir-common/filteroperators
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/filteroperators
 type: application/javascript

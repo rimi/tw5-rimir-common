@@ -1,9 +1,9 @@
 caption: Global Utilities
 created: 20201123182744393
-modified: 20201209072437787
+modified: 20201209075020736
 tags: $:/tags/Macro
 title: $:/rimir-common/extensions/core/macros/global-utils
-tocp.rimir-common.parent.ref: #:/rimir-common/macros
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/macros
 type: text/vnd.tiddlywiki
 
 \define rimir:name() <$view field="caption"><$view field="title"/></$view>
