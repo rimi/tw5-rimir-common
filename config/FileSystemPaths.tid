@@ -9,5 +9,6 @@ type: text/vnd.tiddlywiki
 [prefix[$:/lvr/]][prefix[$:/tepa]]+[removeprefix[$:]addprefix[_system/housing]]
 [prefix[#:/rimir-common/]addprefix[_system/rimir-common/]]
 [prefix[#:/rimir/]addprefix[_system/rimir/]]
+[prefix[#:/p/]removeprefix[#:/p/]addprefix[_system/plugins/rimir/]]
 [is[system]removeprefix[$:/]addprefix[_system/]]
 [!has[draft.of]]
