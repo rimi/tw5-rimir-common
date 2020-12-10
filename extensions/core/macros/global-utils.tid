@@ -1,17 +1,17 @@
 caption: Global Utilities
 created: 20201123182744393
-modified: 20201209084447706
+modified: 20201210102429613
 tags: $:/tags/Macro
 title: $:/rimir-common/extensions/core/macros/global-utils
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/macros
 type: text/vnd.tiddlywiki
 
 \define rimir:name() <$view field="caption"><$view field="title"/></$view>
-\define rimir:name.list() <$view field="caption.list"><$view field="caption"><$view field="title"/></$view></$view>
+\define rimir:name.list() <$view field="caption.list"><<rimir:name>></$view>
 
 \define rimir:link(name, destination) <a href="$destination$" target="_blank" rel="noopener noreferrer">$name$</a>
 
-\define rimir:details(caption:"""<$view field="caption"><$view field="title"/></$view>""", payload:"""<$transclude mode="block"/>""", display-tools:"true")
+\define rimir:details(caption:"<<rimir:name>>", payload:"""<$transclude mode="block"/>""", display-tools:"true")
 <$wikify name="qualifybase" text="$:/state/rimir/details/<<currentTiddler>>">
 <$wikify name="state" text="""<$macrocall $name="qualify" title=<<qualifybase>>/>""">
 <$reveal type="match" state=<<state>> text="hide" default="hide">
