@@ -1,0 +1,9 @@
+caption: KeyBinding: Toggle DevMode
+created: 20201208160805707
+modified: 20201210112648720
+tags: 
+title: $:/config/shortcuts/rimir:toggle-dev-mode
+tocp.rimir-common.parent.ref: $:/rimir-common/extensions/core/keyboard-shortcuts/toggle-dev-mode
+type: text/vnd.tiddlywiki
+
+ctrl-1

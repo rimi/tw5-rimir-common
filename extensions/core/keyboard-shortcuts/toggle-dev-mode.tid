@@ -1,7 +1,7 @@
 caption: KeyboardShortcut: Toggle DevMode
 created: 20201208160224876
-key: ((toggle-dev-mode))
-modified: 20201209074955423
+key: ((rimir:toggle-dev-mode))
+modified: 20201210112101723
 tags: $:/tags/KeyboardShortcut
 title: $:/rimir-common/extensions/core/keyboard-shortcuts/toggle-dev-mode
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/keyboard-shortcuts

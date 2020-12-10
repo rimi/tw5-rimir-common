@@ -1,9 +1,0 @@
-caption: Info: Toggle DevMode
-created: 20201208161119615
-modified: 20201208161256136
-tags: 
-title: $:/config/ShortcutInfo/toggle-dev-mode
-tocp.main-parent.ref: #:/wiki/config/shortcuts
-type: text/vnd.tiddlywiki
-
-Toggles the Wikis Dev-Mode On/Off
