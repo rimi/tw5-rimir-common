@@ -1,6 +1,6 @@
 caption: FS Path-Translations
 created: 20190611125748662
-modified: 20201208063135357
+modified: 20201210103111357
 tags: 
 title: $:/config/FileSystemPaths
 tocp.main-parent.ref: #:/wiki/config
@@ -10,5 +10,6 @@ type: text/vnd.tiddlywiki
 [prefix[#:/rimir-common/]addprefix[_system/rimir-common/]]
 [prefix[#:/rimir/]addprefix[_system/rimir/]]
 [prefix[#:/p/]removeprefix[#:/p/]addprefix[_system/plugins/rimir/]]
+[prefix[$:/todolist/data/lvr/]removeprefix[$:/todolist/data/lvr]addprefix[_system/housing/lvr/todolist]]
 [is[system]removeprefix[$:/]addprefix[_system/]]
 [!has[draft.of]]
