@@ -7,6 +7,7 @@ tocp.main-parent.ref: #:/wiki/config
 type: text/vnd.tiddlywiki
 
 [prefix[$:/lvr/]][prefix[$:/tepa]]+[removeprefix[$:]addprefix[_system/housing]]
+[prefix[$:/appify/apps/lvr]removeprefix[$:]addprefix[_system/housing/lvr]]
 [prefix[#:/rimir-common/]addprefix[_system/rimir-common/]]
 [prefix[#:/rimir/]addprefix[_system/rimir/]]
 [prefix[#:/p/]removeprefix[#:/p/]addprefix[_system/plugins/rimir/]]
