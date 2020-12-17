@@ -1,6 +1,6 @@
 caption: Global Utilities
 created: 20201123182744393
-modified: 20201210105652070
+modified: 20201217073317970
 tags: $:/tags/Macro
 title: $:/rimir-common/extensions/core/macros/global-utils
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/macros
@@ -11,7 +11,7 @@ type: text/vnd.tiddlywiki
 
 \define rimir:link(name, destination) <a href="$destination$" target="_blank" rel="noopener noreferrer">$name$</a>
 
-\define rimir:details(caption:"<<rimir:name>>", payload:"""<$transclude mode="block" tiddler="$renderTemplate$"><$transclude mode="block"/></$transclude>""", renderTemplate:"NOT_EXISTING_TIDDLER!", display-tools:"true")
+\define rimir:details(caption:"<<rimir:name>>", payload:"""<$transclude mode="block" tiddler="$renderTemplate$"><$transclude mode="block"/></$transclude>""", renderTemplate:"NOT_EXISTING_TIDDLER!", displayTools:"yes")
 <$wikify name="qualifybase" text="$:/state/rimir/details/<<currentTiddler>>">
 <$wikify name="state" text="""<$macrocall $name="qualify" title=<<qualifybase>>/>""">
 <$reveal type="match" state=<<state>> text="hide" default="hide">
@@ -22,7 +22,7 @@ type: text/vnd.tiddlywiki
 <$button class="rimir-details-button" set=<<state>> setTo="hide">{{$:/images/fa5/solid/chevron-circle-down}} $caption$</$button>
 </$reveal>
 
-<$list filter="[[$display-tools$]match[true]]" variable="ignore">
+<$list filter="[[$displayTools$]match[yes]]" variable="ignore">
 <$button tooltip="Open Tiddler" class="tc-btn-invisible tc-tiddlylink"><$action-navigate/>{{$:/core/images/open-window}}</$button>
 <$button tooltip="Edit Tiddler" class="tc-btn-invisible tc-tiddlylink" disabled="true"><$action-sendmessage $message="tm-modal" $param="$:/core/ui/EditTemplate" currentTiddler=<<currentTiddler>>/>{{$:/core/images/edit-button}}</$button>
 </$list>
@@ -33,9 +33,9 @@ $payload$
 </$wikify>
 \end
 
-\define rimir:simple-details(tiddler, displayTools:"false")
+\define rimir:simple-details(tiddler, displayTools:"no")
 <$tiddler tiddler=<<__tiddler__>>>
-<<rimir:details display-tools:"$displayTools$">>
+<<rimir:details displayTools:"$displayTools$">>
 </$tiddler>
 \end
 
