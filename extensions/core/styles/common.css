@@ -6,6 +6,12 @@
 	width: 75%;
 	text-align: left;
 }
+.rimir-details {
+	border: 1px solid #cccccc;
+	margin: 10px 20px 10px 20px;
+	padding: 2px 20px 10px 10px;
+	background: #e6f7ff;
+}
 .rimir-edit-textarea {
 	width:100%;
 }

@@ -1,6 +1,6 @@
 caption: Global Utilities
 created: 20201123182744393
-modified: 20201217073317970
+modified: 20201217075702650
 tags: $:/tags/Macro
 title: $:/rimir-common/extensions/core/macros/global-utils
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/macros
@@ -27,7 +27,9 @@ type: text/vnd.tiddlywiki
 <$button tooltip="Edit Tiddler" class="tc-btn-invisible tc-tiddlylink" disabled="true"><$action-sendmessage $message="tm-modal" $param="$:/core/ui/EditTemplate" currentTiddler=<<currentTiddler>>/>{{$:/core/images/edit-button}}</$button>
 </$list>
 <$reveal type="match" state=<<state>> text="show">
+<div class="rimir-details">
 $payload$
+</div>
 </$reveal>
 </$wikify>
 </$wikify>
