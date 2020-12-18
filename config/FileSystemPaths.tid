@@ -1,11 +1,12 @@
 caption: FS Path-Translations
 created: 20190611125748662
-modified: 20201213130433845
+modified: 20201218083356699
 tags: 
 title: $:/config/FileSystemPaths
 tocp.main-parent.ref: #:/wiki/config
 type: text/vnd.tiddlywiki
 
+[fspathresolver[]]
 [prefix[$:/lvr/]][prefix[$:/tepa]]+[removeprefix[$:]addprefix[_system/housing]]
 [prefix[$:/appify/apps/lvr]removeprefix[$:]addprefix[_system/housing/lvr]]
 [prefix[#:/rimir-common/]addprefix[_system/rimir-common/]]
