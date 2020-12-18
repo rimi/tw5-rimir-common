@@ -1,0 +1,8 @@
+caption: fspathresolver
+created: 20201217172326430
+modified: 20201218092955357
+module-type: filteroperator
+tags: 
+title: $:/rimir-common/extensions/core/filteroperators/fspathresolver
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/filteroperators
+type: application/javascript

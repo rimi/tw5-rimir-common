@@ -1,0 +1,8 @@
+caption: applytempl
+created: 20201217163731144
+modified: 20201217170207122
+module-type: filteroperator
+tags: 
+title: $:/rimir-common/extensions/core/filteroperators/applytempl
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/filteroperators
+type: application/javascript
