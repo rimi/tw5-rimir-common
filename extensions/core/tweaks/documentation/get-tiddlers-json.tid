@@ -1,7 +1,7 @@
-caption: Tweak-Set: get-tiddlers-json Route-Adaptations
+caption: Tweak-Set: Route-Adaptations in get-tiddlers-json
 created: 20201219150441758
-modified: 20201219150952357
-tags: 
+modified: 20201219155351179
+tags: tweak:desc
 title: $:/rimir-common/extensions/core/tweaks/documentation/get-tiddlers-json
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/documentation
 type: text/vnd.tiddlywiki

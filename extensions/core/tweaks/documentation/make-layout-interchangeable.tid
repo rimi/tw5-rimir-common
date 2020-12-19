@@ -1,7 +1,7 @@
-caption: Tweak-Set: make Layout interchangeable through PageTemplate
+caption: Tweak-Set: Make Layout interchangeable through PageTemplate
 created: 20201219152051824
-modified: 20201219152141523
-tags: 
+modified: 20201219155400710
+tags: tweak:desc
 title: $:/rimir-common/extensions/core/tweaks/documentation/make-layout-interchangeable
 tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/documentation
 type: text/vnd.tiddlywiki
