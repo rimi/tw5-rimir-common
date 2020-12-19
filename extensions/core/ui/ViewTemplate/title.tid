@@ -1,0 +1,63 @@
+caption: ViewTemplate: Show caption prior to title if exists
+created: 20201219154115836
+modified: 20201219154447382
+tags: $:/tags/ViewTemplate tweak:copy
+title: $:/core/ui/ViewTemplate/title
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/ui
+tweak.desc: $:/rimir-common/extensions/core/tweaks/documentation/display_caption
+tweak.orig-title: $:/core/ui/ViewTemplate/title
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+\define title-styles()
+fill:$(foregroundColor)$;
+\end
+\define config-title()
+$:/config/ViewToolbarButtons/Visibility/$(listItem)$
+\end
+<div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/ViewToolbar]!has[draft.of]]" variable="listItem"><$reveal type="nomatch" state=<<config-title>> text="hide"><$set name="tv-config-toolbar-class" filter="[<tv-config-toolbar-class>] [<listItem>encodeuricomponent[]addprefix[tc-btn-]]"><$transclude tiddler=<<listItem>>/></$set></$reveal></$list>
+</span>
+<$set name="tv-wikilinks" value={{$:/config/Tiddlers/TitleLinks}}>
+<$link>
+<$set name="foregroundColor" value={{!!color}}>
+<span class="tc-tiddler-title-icon" style=<<title-styles>>>
+<$transclude tiddler={{!!icon}}>
+<$transclude tiddler={{$:/config/DefaultTiddlerIcon}}/>
+</$transclude>
+</span>
+</$set>
+<$list filter="[all[current]prefix[$:/]]">
+<$list filter="[all[current]has[caption]]">
+<h2 class="tc-title">
+<$view field="caption"/>
+</h2>
+</$list>
+<$list filter="[all[current]removeprefix[$:/]]">
+<div class="tc-subtitle" title={{$:/language/SystemTiddler/Tooltip}}>
+<span class="tc-system-title-prefix">$:/</span><$text text=<<currentTiddler>>/>
+</div>
+</$list>
+</$list>
+<$list filter="[all[current]!prefix[$:/]]">
+<h2 class="tc-title">
+<$view field="caption"><$view field="title"/></$view>
+</h2>
+<$list filter="[all[current]has[caption]]">
+<div class="tc-subtitle">
+<$view field="title"/>
+</div>
+</$list>
+</$list>
+</$link>
+</$set>
+</div>
+
+<$reveal type="nomatch" text="" default="" state=<<tiddlerInfoState>> class="tc-tiddler-info tc-popup-handle" animate="yes" retain="yes">
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/TiddlerInfoSegment]!has[draft.of]] [[$:/core/ui/TiddlerInfo]]" variable="listItem"><$transclude tiddler=<<listItem>> mode="block"/></$list>
+
+</$reveal>
+</div>

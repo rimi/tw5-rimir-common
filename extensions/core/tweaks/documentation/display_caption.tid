@@ -1,0 +1,7 @@
+caption: Tweak-Set: Display caption prior to title (if exists) in tiddler-view
+created: 20201219154240100
+modified: 20201219154325721
+tags: 
+title: $:/rimir-common/extensions/core/tweaks/documentation/display_caption
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/documentation
+type: text/vnd.tiddlywiki
