@@ -1,0 +1,42 @@
+caption: PageTemplate: make main-content dynamically interchangeable
+created: 20201219151729833
+description: {{$:/language/PageTemplate/Description}}
+modified: 20201219152300588
+name: {{$:/language/PageTemplate/Name}}
+tags: tweak:overwrite
+title: $:/core/ui/PageTemplate
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/ui
+tweak.desc: $:/rimir-common/extensions/core/tweaks/documentation/make-layout-interchangeable
+tweak.orig-title: $:/core/ui/PageTemplate
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+\define containerClasses()
+tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
+\end
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+<$vars
+	tv-config-toolbar-icons={{$:/config/Toolbar/Icons}}
+	tv-config-toolbar-text={{$:/config/Toolbar/Text}}
+	tv-config-toolbar-class={{$:/config/Toolbar/ButtonClass}}
+	tv-enable-drag-and-drop={{$:/config/DragAndDrop/Enable}}
+	tv-show-missing-links={{$:/config/MissingLinks}}
+	storyviewTitle={{$:/view}}
+	languageTitle={{{ [{$:/language}get[name]] }}}>
+
+<div class=<<containerClasses>>>
+
+<$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
+
+<$list filter="[{$:/config/ActivePageTemplate}is[tiddler]else[$:/core/ui/DefaultPageTemplateDropzone]]">
+
+<$transclude/>
+
+</$list>
+
+</$navigator>
+
+</div>
+
+</$vars>

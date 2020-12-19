@@ -1,0 +1,11 @@
+caption: $:/config/ui/EditTemplate
+created: 20201218143708731
+modified: 20201219152859080
+tags: tweak:snapshot
+title: $:/rimir-common/snapshots4tweaks/$:/config/ui/EditTemplate
+tocp.main-parent.ref: #:/wiki/snapshots4tweaks/core
+tweak.orig-title: $:/config/ui/EditTemplate
+tweak.orig-version: 5.1.23-prerelease
+type: text/vnd.tiddlywiki
+
+$:/core/ui/EditTemplate

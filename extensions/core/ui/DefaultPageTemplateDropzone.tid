@@ -1,0 +1,19 @@
+caption: PageTemplate: Original Layout with Dropzone
+created: 20201219152517799
+modified: 20201219152741760
+tags: tweak:copy
+title: $:/core/ui/DefaultPageTemplateDropzone
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/ui
+tweak.desc: $:/rimir-common/extensions/core/tweaks/documentation/make-layout-interchangeable
+tweak.orig-title: $:/core/ui/PageTemplate
+type: text/vnd.tiddlywiki
+
+<$dropzone enable=<<tv-enable-drag-and-drop>>>
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]" variable="listItem">
+
+<$transclude tiddler=<<listItem>>/>
+
+</$list>
+
+</$dropzone>

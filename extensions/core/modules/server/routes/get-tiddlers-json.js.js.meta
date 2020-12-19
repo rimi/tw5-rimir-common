@@ -1,0 +1,10 @@
+caption: Route: get-tiddlers-json Adaptations
+created: 20201219150144283
+modified: 20201219150935605
+module-type: route
+tags: tweak:overwrite
+title: $:/core/modules/server/routes/get-tiddlers-json.js
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/core/tweaks/routes
+tweak.desc: $:/rimir-common/extensions/core/tweaks/documentation/get-tiddlers-json
+tweak.orig-title: $:/core/modules/server/routes/get-tiddlers-json.js
+type: application/javascript
