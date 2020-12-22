@@ -1,6 +1,6 @@
 caption: FS Path-Translations
 created: 20190611125748662
-modified: 20201218083356699
+modified: 20201222105617503
 tags: 
 title: $:/config/FileSystemPaths
 tocp.main-parent.ref: #:/wiki/config
@@ -11,6 +11,9 @@ type: text/vnd.tiddlywiki
 [prefix[$:/appify/apps/lvr]removeprefix[$:]addprefix[_system/housing/lvr]]
 [prefix[#:/rimir-common/]addprefix[_system/rimir-common/]]
 [prefix[#:/rimir/]addprefix[_system/rimir/]]
+[prefix[#:/wiki/housing/lvr/]removeprefix[#:/wiki/housing/]addprefix[_system/housing/lvr/#:/]]
+[prefix[#:/wiki/housing/tepa/]removeprefix[#:/wiki/housing/]addprefix[_system/housing/tepa/#:/]]
+[prefix[#:/wiki/housing/secdb/]removeprefix[#:/wiki/housing/]addprefix[_system/housing/secdb/#:/]]
 [prefix[#:/p/]removeprefix[#:/p/]addprefix[_system/plugins/rimir/]]
 [prefix[#:/d/]removeprefix[#:/d/]addprefix[data/]]
 [prefix[$:/todolist/data/lvr/]removeprefix[$:/todolist/data/lvr]addprefix[_system/housing/lvr/todolist]]
