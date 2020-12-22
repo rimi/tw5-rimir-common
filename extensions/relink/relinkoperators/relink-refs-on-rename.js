@@ -1,5 +1,5 @@
 /*\
-With special thanks to fibbles: https://github.com/flibbles/tw5-relink/issues/26 !
+With special thanks to flibbles: https://github.com/flibbles/tw5-relink/issues/26 !
 
 Handles all fields with ".ref" and ".refs" suffixes.
 
