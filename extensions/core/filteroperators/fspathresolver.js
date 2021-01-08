@@ -14,7 +14,7 @@ const FIELDNAME_CONTAINMENT_TEMPLATE = "fs-path.containment.tmpl";
 const FIELDNAME_TEMPLATE = "fs-path.tmpl";
 const FIELDNAME_FSPATH_PREFIX = "fs-path.";
 	
-const logger = new $tw.utils.Logger("fspathresolver", {enable: true});
+const logger = new $tw.utils.Logger("fspathresolver", {enable: false});
 	
 /*
 Export our filter function
