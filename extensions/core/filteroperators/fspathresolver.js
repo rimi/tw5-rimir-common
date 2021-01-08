@@ -101,14 +101,16 @@ const findFsPathDefiningTagTiddler = function(tiddler, options){
 	if(tiddler.fields.tags){
 		for (let tag of tiddler.fields.tags){
 			const tagTiddler = options.wiki.getTiddler(tag);
-			for(let field in tagTiddler.fields){
-				if(field.startsWith(FIELDNAME_FSPATH_PREFIX)){
-					result = tagTiddler;
+			if(tagTiddler){
+				for(let field in tagTiddler.fields){
+					if(field.startsWith(FIELDNAME_FSPATH_PREFIX)){
+						result = tagTiddler;
+						break;
+					}
+				}
+				if(result){
 					break;
 				}
-			}
-			if(result){
-				break;
 			}
 		};
 	}
