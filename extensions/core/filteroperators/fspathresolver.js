@@ -13,7 +13,8 @@ const FIELDNAME_CONTAINMENT_FIELDS = "fs-path.containment.fields";
 const FIELDNAME_CONTAINMENT_TEMPLATE = "fs-path.containment.tmpl";
 const FIELDNAME_TEMPLATE = "fs-path.tmpl";
 const FIELDNAME_FSPATH_PREFIX = "fs-path.";
-const FIELDNAME_DASMA_CONTAINMENT_OWNER = "dasma.owner.ref";
+	
+const FIELDNAME_CONTAINMENT_OWNER = "owner.ref";
 	
 const logger = new $tw.utils.Logger("fspathresolver", {enable: false});
 	
@@ -47,11 +48,13 @@ const calculateFsPathForTiddler = function(tiddler, options){
 		}else{
 			logger.alert("Unknown fs-path definition located inside of '" + fsPathDefiningTagTiddler.fields.title + "'!");
 		}
-	}else if(tiddler.hasField(FIELDNAME_DASMA_CONTAINMENT_OWNER)){
-		const containerTiddler = options.wiki.getTiddler(tiddler.fields[FIELDNAME_DASMA_CONTAINMENT_OWNER]);
+	}else if(tiddler.hasField(FIELDNAME_CONTAINMENT_OWNER)){
+		const containerTiddler = options.wiki.getTiddler(tiddler.fields[FIELDNAME_CONTAINMENT_OWNER]);
 		if(containerTiddler){
 			const containerPath = calculateFsPathForTiddler(containerTiddler, options);
-			result = containerPath + "/" + tiddler.fields.title;
+			if(containerPath){
+				result = containerPath + "/" + tiddler.fields.title;
+			}
 		}
 	}
 	return result;
