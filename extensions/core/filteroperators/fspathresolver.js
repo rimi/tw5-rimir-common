@@ -37,7 +37,15 @@ exports.fspathresolver = function(source,operator,options) {
 const calculateFsPathForTiddler = function(tiddler, options){
 	let result;
 	const fsPathDefiningTagTiddler = findFsPathDefiningTagTiddler(tiddler, options);
-	if(fsPathDefiningTagTiddler){
+	if(tiddler.hasField(FIELDNAME_CONTAINMENT_OWNER)){
+		const containerTiddler = options.wiki.getTiddler(tiddler.fields[FIELDNAME_CONTAINMENT_OWNER]);
+		if(containerTiddler){
+			const containerPath = calculateFsPathForTiddler(containerTiddler, options);
+			if(containerPath){
+				result = containerPath + "/" + tiddler.fields.title;
+			}
+		}
+	}else if(fsPathDefiningTagTiddler){
 		logger.log("Tiddler '" + tiddler.fields.title + "' has fs-path definition inside of '" + fsPathDefiningTagTiddler.fields.title + "'");
 		if(definesFsPathContainment(fsPathDefiningTagTiddler)){
 			logger.log(" -> AS CONTAINMENT");
@@ -47,14 +55,6 @@ const calculateFsPathForTiddler = function(tiddler, options){
 			result = calculateTemplatePath(tiddler, fsPathDefiningTagTiddler, options)
 		}else{
 			logger.alert("Unknown fs-path definition located inside of '" + fsPathDefiningTagTiddler.fields.title + "'!");
-		}
-	}else if(tiddler.hasField(FIELDNAME_CONTAINMENT_OWNER)){
-		const containerTiddler = options.wiki.getTiddler(tiddler.fields[FIELDNAME_CONTAINMENT_OWNER]);
-		if(containerTiddler){
-			const containerPath = calculateFsPathForTiddler(containerTiddler, options);
-			if(containerPath){
-				result = containerPath + "/" + tiddler.fields.title;
-			}
 		}
 	}
 	return result;
