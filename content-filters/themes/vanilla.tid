@@ -1,0 +1,9 @@
+caption: ContentFilter: Theme+Vanilla
+created: 20210222160030045
+modified: 20210224132540256
+tags: rimir:content-filter
+title: $:/rimir-common/content-filters/themes/vanilla
+tocp.rimir-common.parent.ref: #:/rimir-common/extensions/content-filters
+type: text/vnd.tiddlywiki
+
+[[$:/theme]] [[$:/themes/tiddlywiki/vanilla]]
